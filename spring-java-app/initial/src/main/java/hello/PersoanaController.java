@@ -66,10 +66,8 @@ public class PersoanaController {
 
   @RequestMapping(value="/persoana", method = RequestMethod.POST)
   public ResponseEntity create() {
-    
   Persoana p = new Persoana(5,"Ionescu");
   this.persoane.add(p); 
-        return new ResponseEntity<String>(p.getName(), new HttpHeaders(), HttpStatus.OK);
-     
+  return new ResponseEntity<String>(p.getName(), new HttpHeaders(), HttpStatus.OK);
   }
 }
