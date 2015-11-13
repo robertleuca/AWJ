@@ -66,10 +66,8 @@ public class ProdusController {
 
   @RequestMapping(value="/Produs", method = RequestMethod.POST)
   public ResponseEntity create() {
-    
   Produs p = new Produs(5,"Mirinda");
   this.produse.add(p); 
-        return new ResponseEntity<String>(p.getName(), new HttpHeaders(), HttpStatus.OK);
-     
+  return new ResponseEntity<String>(p.getName(), new HttpHeaders(), HttpStatus.OK);
   }
 }
