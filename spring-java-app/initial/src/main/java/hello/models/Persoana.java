@@ -21,7 +21,8 @@ public class Persoana {
   public int getId() {
     return this.id;
   }
+  
   public void setName(String name){
-        this.name=name;
-    }
+      this.name=name;
+  }
 }
