@@ -22,7 +22,7 @@ public class Masina {
     return this.id;
   }
   public void setName(String name){
-        this.name=name;
-    }
+      this.name = name;
+  }
 }
 
