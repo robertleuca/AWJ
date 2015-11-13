@@ -52,7 +52,7 @@ public class MasinaController {
     return new ResponseEntity<String>(null, new HttpHeaders(), HttpStatus.NOT_FOUND);
 
   }
-@RequestMapping(value="/Masina/{id}", method = RequestMethod.PUT)
+  @RequestMapping(value="/Masina/{id}", method = RequestMethod.PUT)
   public ResponseEntity update(@PathVariable("id") int id) {
     for(Masina p : this.masini) {
       if(p.getId() == id) {
@@ -63,11 +63,10 @@ public class MasinaController {
     return new ResponseEntity<String>(null, new HttpHeaders(), HttpStatus.NOT_FOUND);
   }
 
-
   @RequestMapping(value="/Masina", method = RequestMethod.POST)
   public ResponseEntity create() {
-  Masina p = new Masina(5,"Lamborghini");
-  this.masini.add(p); 
-  return new ResponseEntity<String>(p.getName(), new HttpHeaders(), HttpStatus.OK);
+    Masina p = new Masina(5,"Lamborghini");
+    this.masini.add(p); 
+    return new ResponseEntity<String>(p.getName(), new HttpHeaders(), HttpStatus.OK);
   }
 }
