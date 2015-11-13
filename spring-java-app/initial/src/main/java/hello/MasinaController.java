@@ -66,10 +66,8 @@ public class MasinaController {
 
   @RequestMapping(value="/Masina", method = RequestMethod.POST)
   public ResponseEntity create() {
-    
   Masina p = new Masina(5,"Lamborghini");
-this.masini.add(p); 
-        return new ResponseEntity<String>(p.getName(), new HttpHeaders(), HttpStatus.OK);
-     
+  this.masini.add(p); 
+  return new ResponseEntity<String>(p.getName(), new HttpHeaders(), HttpStatus.OK);
   }
 }
